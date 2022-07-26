@@ -14,7 +14,7 @@ import java.util.List;
 public class BikesController {
 
     private final BikeService bikeService;
-    private BikeRepository dao;
+    private final BikeRepository dao;
 
     public BikesController(BikeService bikeService, BikeRepository dao) {
         this.bikeService = bikeService;
@@ -30,9 +30,10 @@ public class BikesController {
     }
 
     @PostMapping
-    public BikeEntity add(@ModelAttribute("bike") @Valid BikeModel model) {
+    public String add(@ModelAttribute("bike") @Valid BikeModel model) {
 
-        return bikeService.saveBike(model);
+         bikeService.saveBike(model);
+         return "success";
     }
 
 }
