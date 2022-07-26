@@ -15,9 +15,9 @@ public class BikeService {
         this.bikeRepository = bikeRepository;
     }
 
-    public void saveBike(BikeModel model) {
+    public BikeEntity saveBike(BikeModel model) {
         BikeEntity bikeEntity = BikeMapper.toEntity(model);
-        bikeRepository.save(bikeEntity);
+        return bikeRepository.save(bikeEntity);
     }
 
 }

@@ -6,6 +6,7 @@ import com.springrentalbike.models.BikeModel;
 import com.springrentalbike.services.BikeService;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RequestMapping("/bikes-list")
@@ -29,8 +30,9 @@ public class BikesController {
     }
 
     @PostMapping
-    public void add(@RequestBody BikeModel add) {
-        bikeService.saveBike(add);
+    public BikeEntity add(@ModelAttribute("bike") @Valid BikeModel model) {
+
+        return bikeService.saveBike(model);
     }
 
 }
