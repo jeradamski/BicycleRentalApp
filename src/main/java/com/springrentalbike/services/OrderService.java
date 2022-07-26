@@ -2,14 +2,15 @@ package com.springrentalbike.services;
 
 import com.springrentalbike.dao.BikeRepository;
 import com.springrentalbike.dao.OrderRepository;
+import com.springrentalbike.entities.BikeEntity;
+import com.springrentalbike.entities.ClientEntity;
+import com.springrentalbike.entities.OrderEntity;
 import com.springrentalbike.mappers.ClientMapper;
 import com.springrentalbike.mappers.OrderMapper;
 import com.springrentalbike.models.*;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
-import java.math.BigDecimal;
-import java.util.Date;
 
 @Service
 public class OrderService {

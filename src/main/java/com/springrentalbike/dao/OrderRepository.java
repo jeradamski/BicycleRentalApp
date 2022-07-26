@@ -1,6 +1,6 @@
 package com.springrentalbike.dao;
 
-import com.springrentalbike.models.OrderEntity;
+import com.springrentalbike.entities.OrderEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

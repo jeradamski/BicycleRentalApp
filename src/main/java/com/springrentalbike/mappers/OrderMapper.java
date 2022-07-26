@@ -1,6 +1,6 @@
 package com.springrentalbike.mappers;
 
-import com.springrentalbike.models.OrderEntity;
+import com.springrentalbike.entities.OrderEntity;
 import com.springrentalbike.models.OrderModel;
 
 public class OrderMapper {

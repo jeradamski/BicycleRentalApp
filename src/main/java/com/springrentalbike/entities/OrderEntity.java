@@ -1,4 +1,7 @@
-package com.springrentalbike.models;
+package com.springrentalbike.entities;
+
+import com.springrentalbike.entities.BikeEntity;
+import com.springrentalbike.entities.ClientEntity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

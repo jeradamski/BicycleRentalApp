@@ -1,4 +1,4 @@
-package com.springrentalbike.models;
+package com.springrentalbike.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,6 +23,26 @@ public class BikeEntity {
     private String type;
 
     private BigDecimal rentalPrice;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setRentalPrice(BigDecimal rentalPrice) {
+        this.rentalPrice = rentalPrice;
+    }
 
     public Long getId() {
         return id;

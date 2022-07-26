@@ -1,6 +1,6 @@
 package com.springrentalbike.mappers;
 
-import com.springrentalbike.models.ClientEntity;
+import com.springrentalbike.entities.ClientEntity;
 import com.springrentalbike.models.ClientModel;
 
 public class ClientMapper {

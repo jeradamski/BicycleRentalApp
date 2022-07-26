@@ -1,11 +1,10 @@
 package com.springrentalbike.controllers;
 
 import com.springrentalbike.dao.BikeRepository;
-import com.springrentalbike.models.BikeEntity;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.springrentalbike.entities.BikeEntity;
+import com.springrentalbike.models.BikeModel;
+import com.springrentalbike.services.BikeService;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -13,11 +12,27 @@ import java.util.List;
 @RestController
 public class BikesController {
 
-    @Autowired
+    private final BikeService bikeService;
     private BikeRepository dao;
+
+    public BikesController(BikeService bikeService, BikeRepository dao) {
+        this.bikeService = bikeService;
+        this.dao = dao;
+    }
 
     @GetMapping
     public List<BikeEntity> list() {return dao.findAll();}
 
+    @GetMapping("/{id}")
+    public BikeEntity get(@PathVariable long id) {
+        return dao.findById(id).orElse(null);
+    }
+
+    @PostMapping
+    public void add(@RequestBody BikeModel add) {
+        bikeService.saveBike(add);
+    }
 
 }
+
+

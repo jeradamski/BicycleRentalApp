@@ -1,4 +1,4 @@
-package com.springrentalbike.models;
+package com.springrentalbike.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
